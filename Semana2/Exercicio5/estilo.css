@@ -1,0 +1,35 @@
+h2, h5{
+  color: #f4cc14;
+  font-weight: bold;
+}
+
+.Roupas{
+  color: blue;
+}
+
+.lista{
+  color: brown;
+}
+
+.lista .usada{
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.alimentos{
+  color: cyan;
+}
+
+
+.moveis{
+  color: blue;
+}
+
+.moveis .usada{
+  color: greenyellow;
+  font-weight: bold;
+}
+
+ul.moveis{
+  color: brown;
+}
