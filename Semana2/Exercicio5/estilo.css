@@ -20,7 +20,6 @@ h2, h5{
   color: cyan;
 }
 
-
 .moveis{
   color: blue;
 }
@@ -31,5 +30,9 @@ h2, h5{
 }
 
 ul.moveis{
+  color: brown;
+}
+
+ul{
   color: brown;
 }
