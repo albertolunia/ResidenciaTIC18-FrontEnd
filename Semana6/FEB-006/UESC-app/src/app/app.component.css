@@ -1,0 +1,77 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    color: #f41;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.divisao1 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 20%;
+    grid-gap: 5px;
+    font-family: 'Lora', serif;
+}
+
+.cabeçalho {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.box {
+    border: 1px solid #000;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid #000;
+    overflow: auto;
+}
+
+.divisao2 {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-gap: 5px;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 12px;
+    text-align: center;
+    border: 1px solid #000;
+    color: #a123;
+    font-family: 'Vina Sans', sans-serif;
+}
+
+@media (max-width: 500px) {
+    .divisao1 {
+        grid-template-columns: 1fr;
+    }
+
+    .divisao2 {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: auto;
+    }
+}
