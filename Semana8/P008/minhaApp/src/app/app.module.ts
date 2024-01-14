@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WikipediaComponent } from './wikipedia/wikipedia.component';
 import { FormsModule } from '@angular/forms';
+import { ArrumandoWikiPipe } from './arrumando-wiki.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WikipediaComponent
+    WikipediaComponent,
+    ArrumandoWikiPipe
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { WikiServiceService } from '../wiki-service.service';
 
 interface Result {
   title: string;
@@ -13,10 +13,14 @@ interface Result {
     <h1>Consultando a Wiki API</h1>
     <input [(ngModel)]="query" placeholder="Digite sua pesquisa aqui">
     <button (click)="search()">Buscar</button>
-    <div *ngFor="let result of results">
-      <h2>{{result.title}}</h2>
-      <p>{{result.snippet}}</p>
-      <a href="{{result.pageid}}">Leia mais...</a>
+
+    <div *ngIf="results.length > 0">
+      <h2>Resultados para "{{ query }}"</h2>
+      <div *ngFor="let result of results">
+        <h3>{{result.title}}</h3>
+        <p>{{result.snippet}}</p>
+        <a [href]="result.pageid" target="_blank">Leia mais...</a>
+      </div>
     </div>
   `,
 })
@@ -24,15 +28,15 @@ export class WikipediaComponent {
   query = '';
   results: Result[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private wikiService: WikiServiceService) {}
 
   search() {
-    this.http.get<any>(`https://pt.wikipedia.org/w/api.php?action=query&list=search&format=json&origin=*&srsearch=${this.query}`)
+    this.wikiService.getResults(this.query)
       .subscribe(data => {
         this.results = data.query.search.map((result: Result) => ({
           title: result.title,
           snippet: result.snippet,
-          pageid: `https://pt.wikipedia.org/?curid=${result.pageid}`
+          pageid: `https://en.wikipedia.org/?curid=${result.pageid}`
         }));
       });
   }
