@@ -12,7 +12,7 @@ interface Result {
   template: `
   <div class="container">
     <h1>Consultando a Wiki API</h1>
-    <input [(ngModel)]="query" placeholder="Digite sua pesquisa aqui">
+    <!-- <input [(ngModel)]="query" placeholder="Digite sua pesquisa aqui"> -->
     <button (click)="search()">Buscar</button>
 
     <div *ngIf="results.length > 0">
