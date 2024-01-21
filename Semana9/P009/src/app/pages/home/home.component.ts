@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     }
     
     goToP005(): void {
-      this.router.navigate(['/wiki']);
+      this.router.navigate(['/p005']);
     }
 
     goToP006(): void {

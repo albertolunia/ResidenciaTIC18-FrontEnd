@@ -19,7 +19,7 @@ interface Result {
       <h2>Resultados para "{{ query }}"</h2>
       <div *ngFor="let result of results">
         <h3>{{result.title}}</h3>
-        <p [innerHTML]="result.snippet | arrumandoWiki:query"></p>
+        <!-- <p [innerHTML]="result.snippet | arrumandoWiki:query"></p> -->
         <a [href]="result.pageid" target="_blank">Leia mais...</a>
       </div>
     </div>
