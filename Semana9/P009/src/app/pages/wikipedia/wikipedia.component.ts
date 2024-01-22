@@ -12,14 +12,14 @@ interface Result {
   template: `
   <div class="container">
     <h1>Consultando a Wiki API</h1>
-    <input [(ngModel)]="query" placeholder="Digite sua pesquisa aqui">
+    <!-- <input [(ngModel)]="query" placeholder="Digite sua pesquisa aqui"> -->
     <button (click)="search()">Buscar</button>
 
     <div *ngIf="results.length > 0">
       <h2>Resultados para "{{ query }}"</h2>
       <div *ngFor="let result of results">
         <h3>{{result.title}}</h3>
-        <p [innerHTML]="result.snippet | arrumandoWiki:query"></p>
+        <!-- <p [innerHTML]="result.snippet | arrumandoWiki:query"></p> -->
         <a [href]="result.pageid" target="_blank">Leia mais...</a>
       </div>
     </div>

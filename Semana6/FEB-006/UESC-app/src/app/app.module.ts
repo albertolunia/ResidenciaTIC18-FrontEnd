@@ -20,6 +20,13 @@ import { ResultadosComponent } from './resultados/resultados.component';
     BrowserModule,
     AppRoutingModule
   ],
+  exports: [
+    AppComponent,
+    NoticiasComponent,
+    DestaqueComponent,
+    ServicosComponent,
+    ResultadosComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
