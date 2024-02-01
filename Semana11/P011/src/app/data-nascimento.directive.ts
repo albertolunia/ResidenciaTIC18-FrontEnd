@@ -10,8 +10,10 @@ import { Validator, AbstractControl, NG_VALIDATORS } from '@angular/forms';
 export class DataNascimentoValidatorDirective implements Validator {
 
   validate(control: AbstractControl): { [key: string]: any } | null {
-    const dataNascimento = new Date(control.value);
+    const [year, month, day] = control.value.split('-').map(Number);
+    const dataNascimento = new Date(year, month - 1, day);
     const dataAtual = new Date();
+    dataAtual.setHours(0, 0, 0, 0);
     if (dataNascimento > dataAtual) {
       return {'dataNascimentoInvalida': true};
     }
