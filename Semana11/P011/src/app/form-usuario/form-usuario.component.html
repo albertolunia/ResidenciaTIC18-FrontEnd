@@ -1,13 +1,14 @@
 <div class="form-container">
     <form id="formComum" (ngSubmit)="onSubmit()" #formulario="ngForm">
-      <label>
-        Usuário:
+      <label for="usuario">
+          Usuário:
+        </label>
         <input name="usuario"
             maxlength="12"
             required
             ngModel
+            id="usuario"
          >
-      </label>
       <label>
         Senha:
         <input 
