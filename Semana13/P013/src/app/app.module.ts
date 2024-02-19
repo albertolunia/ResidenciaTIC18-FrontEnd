@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'criar-atendimento', component: CriarAtendimentoComponent},
   {path: 'listar-atendimento', component: ListarAtendimentoComponent},
-  {path: 'editarAtendimento:/id', component: EditarAtendimentoComponent},
+  {path: 'editar-atendimento/:id', component: EditarAtendimentoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 @NgModule({
