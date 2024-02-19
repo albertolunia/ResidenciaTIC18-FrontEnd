@@ -9,11 +9,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListarAtendimentoComponent } from './listar-atendimento/listar-atendimento.component';
 import { CriarAtendimentoComponent } from './criar-atendimento/criar-atendimento.component';
+import { EditarAtendimentoComponent } from './editar-atendimento/editar-atendimento.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'criar-atendimento', component: CriarAtendimentoComponent},
   {path: 'listar-atendimento', component: ListarAtendimentoComponent},
+  {path: 'editarAtendimento:/id', component: EditarAtendimentoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 @NgModule({
@@ -21,6 +23,7 @@ const routes: Routes = [
     AppComponent,
     ListarAtendimentoComponent,
     CriarAtendimentoComponent,
+    EditarAtendimentoComponent,
   ],
   imports: [
     BrowserModule,
