@@ -36,6 +36,11 @@ export class DataBaseService implements OnInit{
     }
     ));
   }
-  
+
+  updateAtendimento(id: string, Atendimento: {nomeDoCliente: string, data: string, hora: string, tipo: string, status: string, descricao: string})
+  {
+    return this.http.put('https://residencia-9c476-default-rtdb.firebaseio.com/posts/' + id + '.json', Atendimento, {observe: 'response'});
+  }
+
     
 }
