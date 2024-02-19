@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable, map, of } from 'rxjs';
+import { Atendimento } from '../atendimento';
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +41,5 @@ export class DataBaseService implements OnInit{
   updateAtendimento(id: string, Atendimento: {nomeDoCliente: string, data: string, hora: string, tipo: string, status: string, descricao: string})
   {
     return this.http.put('https://residencia-9c476-default-rtdb.firebaseio.com/posts/' + id + '.json', Atendimento, {observe: 'response'});
-  }
-
-    
+  } 
 }
