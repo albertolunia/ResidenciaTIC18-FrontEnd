@@ -8,9 +8,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListarAtendimentoComponent } from './listar-atendimento/listar-atendimento.component';
+import { CriarAtendimentoComponent } from './criar-atendimento/criar-atendimento.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'criar-atendimento', component: CriarAtendimentoComponent},
   {path: 'listar-atendimento', component: ListarAtendimentoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
@@ -18,6 +20,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ListarAtendimentoComponent,
+    CriarAtendimentoComponent,
   ],
   imports: [
     BrowserModule,
