@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListarAtendimentoComponent } from './listar-atendimento/listar-atendimento.component';
 import { CriarAtendimentoComponent } from './criar-atendimento/criar-atendimento.component';
 import { EditarAtendimentoComponent } from './editar-atendimento/editar-atendimento.component';
+import { DetalharAtendimentoComponent } from './detalhar-atendimento/detalhar-atendimento.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'criar-atendimento', component: CriarAtendimentoComponent},
   {path: 'listar-atendimento', component: ListarAtendimentoComponent},
   {path: 'editar-atendimento/:id', component: EditarAtendimentoComponent},
+  {path: 'detalhar-atendimento/:id', component: DetalharAtendimentoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 @NgModule({
@@ -24,6 +26,7 @@ const routes: Routes = [
     ListarAtendimentoComponent,
     CriarAtendimentoComponent,
     EditarAtendimentoComponent,
+    DetalharAtendimentoComponent,
   ],
   imports: [
     BrowserModule,
