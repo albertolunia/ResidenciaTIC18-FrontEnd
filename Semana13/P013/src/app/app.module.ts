@@ -7,14 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListarAtendimentoComponent } from './listar-atendimento/listar-atendimento.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'listar-atendimento', component: ListarAtendimentoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 @NgModule({
   declarations: [
     AppComponent,
+    ListarAtendimentoComponent,
   ],
   imports: [
     BrowserModule,
